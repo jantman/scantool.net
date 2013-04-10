@@ -7,13 +7,14 @@ I've imported the original source to this repo (scantool_net121src.zip, availabl
 
 Major Dependencies
 ==================
-* Allegro, 
+* [Allegro](http://alleg.sourceforge.net/), "a game programming library". Version 4 should be what's needed.
 
 Installation - Fedora 18
 ========================
 
 Requirements
 ------------
+* allegro 4 - `yum install allegro`
 
 
 References
