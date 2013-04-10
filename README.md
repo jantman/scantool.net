@@ -5,17 +5,19 @@ This is a git repo of "ScanTool.net", the GPLv2 OBDII automotive diagnostics sof
 
 I've imported the original source to this repo (scantool_net121src.zip, available from the [archive downloads page](http://www.scantool.net/downloads/archive/diagnostic-software/) and am including the documentation and changes necessary to get it running on a modern Linux (in my case, Fedora 18).
 
-Major Dependencies
-==================
+Dependencies
+============
 * [Allegro](http://alleg.sourceforge.net/), "a game programming library". Version 4 should be what's needed.
+* [DZCOMM](http://sourceforge.net/projects/dzcomm/), a vintage-2003 "cross-platform" (DOS/Linux/SunOS) RS232 library
 
 Installation - Fedora 18
 ========================
+# `yum install allegro allegro-devel`
+# cd into dz099i, which has an unzipped copy of [DZCOMM](http://sourceforge.net/projects/dzcomm/) 0.9.9i
+## `chmod +x fixunix.sh && ./fixunix.sh`
+## 
 
-Requirements
-------------
-* allegro 4 - `yum install allegro`
-
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/src/allegro/lib/unix
 
 References
 ==========
