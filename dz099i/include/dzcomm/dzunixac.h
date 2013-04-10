@@ -8,10 +8,10 @@
 /* #undef HAVE_DOPRNT */
 
 /* Define if you have a working `mmap' system call.  */
-#define HAVE_MMAP 1
+/* #undef HAVE_MMAP */
 
 /* Define if you have the vprintf function.  */
-#define HAVE_VPRINTF 1
+/* #undef HAVE_VPRINTF */
 
 /* Define as __inline if that's what the C compiler calls it.  */
 /* #undef inline */
@@ -23,7 +23,7 @@
 /* #undef size_t */
 
 /* Define if you have the ANSI C header files.  */
-#define STDC_HEADERS 1
+/* #undef STDC_HEADERS */
 
 /* Define if you can safely include both <sys/time.h> and <time.h>.  */
 #define TIME_WITH_SYS_TIME 1
@@ -51,10 +51,10 @@
 /* #undef HAVE_FINDFIRST */
 
 /* Define if you have the getpagesize function.  */
-#define HAVE_GETPAGESIZE 1
+/* #undef HAVE_GETPAGESIZE */
 
 /* Define if you have the memcmp function.  */
-#define HAVE_MEMCMP 1
+/* #undef HAVE_MEMCMP */
 
 /* Define if you have the stricmp function.  */
 /* #undef HAVE_STRICMP */

@@ -395,6 +395,32 @@ void comm_port_send_break(comm_port *port, int msec_duration);
    A break signal is issued on the serial line. The break signal will be at
    least of the duration specified. It may be longer.
 
+int comm_port_give_line_status(comm_port *port, dzcomm_line line);
+   Returns the value (1 or 0) of the register requested or -1 on failure. Note
+   that the value returned is the inverse of the physical state of the line
+   connected to the UART because the control lines on a UART are all low
+   when the register is high and vice versa.
+
+   The control line is defined using the following enum:
+
+      typedef enum {DZCOMM_DTR, DZCOMM_RTS, DZCOMM_CTS, DZCOMM_DSR} dzcomm_line;
+
+
+int comm_port_set_line_status(comm_port *port, dzcomm_line line, int value);
+   Sets the value of the register requested and return 1 on success or -1 on
+   failure. Note that the physical state of the line connected to the UART
+   will be the inverse of the value set here because the control lines on
+   a UART are all low when the register is high and vice versa.
+
+   The control line is defined using the following enum:
+
+      typedef enum {DZCOMM_DTR, DZCOMM_RTS, DZCOMM_CTS, DZCOMM_DSR} dzcomm_line;
+
+
+   Be careful when using this function - if you are using CTS_RTS flow
+   control or if the UART at the other end is snesitive to it, you may
+   cause confusion ...
+
 int modem_hangup(comm_port *port);
    Sends "+++ATH0" to the line which tells it to hang up if it's a modem. Returns
    one if the entire string (including the concluding '\r') is placed on the output

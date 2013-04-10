@@ -26,7 +26,7 @@ ifdef MINGDIR
    OBJ = scantool.res listports.o get_port_names.o
    EXT = .exe
 else
-   LIBS = -ldzcom $(AL_LIBS)
+   LIBS = -ldzcom -L/home/jantman/temp/scantool.net/dz099i/lib/unix/ -lm $(AL_LIBS)
    EXT = .exe
 endif
 
