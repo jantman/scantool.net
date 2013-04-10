@@ -1,0 +1,1 @@
+#define DZCOMM_MMX
