@@ -1,6 +1,8 @@
 scantool.net
 ============
 
+[![Project Status: Inactive - The project has reached a stable, usable state but is no longer being actively developed; support/maintenance will be provided as time allows.](http://www.repostatus.org/badges/0.1.0/inactive.svg)](http://www.repostatus.org/#inactive)
+
 This is a git repo of "ScanTool.net", the GPLv2 OBDII automotive diagnostics software distributed by [ScanTool.net, LLC](http://www.scantool.net/). The last release of the software, 1.21, was in 2009 and development stopped then. As it seems to be the only freely available, fully functional Linux software for ScanTool.net hardware, a number of people are still running it.
 
 I've imported the original source to this repo (scantool_net121src.zip, available from the [archive downloads page](http://www.scantool.net/downloads/archive/diagnostic-software/) and am including the documentation and changes necessary to get it running on a modern Linux (in my case, Fedora 18).
